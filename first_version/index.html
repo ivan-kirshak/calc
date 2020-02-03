@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">Calculator</h1>
+    <div class="flex calculator">
+        <div class="calculator-container">
+            <input type="text" name="calc" id="calcInput">
+            <div class="row">
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(7)">7</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(8)">8</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(9)">9</button>
+                <button id="mathBtn" class="mathBtn" onclick="pressMathBtn('+')">+</button>
+            </div>
+            <div class="row">
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(4)">4</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(5)">5</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(6)">6</button>
+                <button id="mathBtn" class="mathBtn" onclick="pressMathBtn('-')">-</button>
+            </div>
+            <div class="row">
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(1)">1</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(2)">2</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(3)">3</button>
+                <button id="mathBtn" class="mathBtn" onclick="pressMathBtn('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="delBtn" id="delBtn" onclick="pressDelBtn()">AC</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn(0)">0</button>
+                <button id="numBtn" class="numBtn" onclick="pressNumBtn('.')">.</button>
+                <button id="mathBtn" class="mathBtn" onclick="pressMathBtn('/')">/</button>
+            </div>
+            <div class="row">
+                <button id="equalBtn" class="mathBtn equal" onclick="equalPressBtn()">=</button>
+            </div>
+        </div>
+        <h1 class="heading">History</h1>
+
+        <ul class="history" id="calcHistory">
+
+        </ul>
+    </div>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
