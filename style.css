@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #ffffff;
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.heading {
+  text-align: center;
+  font-weight: 100;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calculator-container {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 1rem;
+}
+#calcInput {
+  width: 12rem;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: right;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+.row {
+  display: flex;
+}
+.row > button {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  outline: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.numBtn {
+  color: #ffffff;
+  background-color: #818181;
+}
+.mathBtn:not(.equal),
+.dotBtn {
+  color: #ffffff;
+  background-color: #fcac00;
+}
+.equal {
+  color: #ffffff;
+  background-color: #008a07;
+  flex-grow: 1;
+}
+.delBtn {
+  color: #ffffff;
+  background-color: #fc0000;
+}
+.addMemBtn {
+  color: #ffffff;
+  background-color: #00a39b;
+}
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+}
