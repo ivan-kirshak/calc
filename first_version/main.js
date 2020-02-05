@@ -7,7 +7,7 @@ let calcInput = document.getElementById("calcInput");
 let calcHistory = document.getElementById("calcHistory");
 
 function pressMathBtn(operator) {
-    if(!resultVal) {
+    if (!resultVal) {
         prevVal = newVal;
     } else {
         prevVal = resultVal;
@@ -20,12 +20,12 @@ function pressMathBtn(operator) {
 }
 
 function pressNumBtn(num) {
-    if(resultVal) {
+    if (resultVal) {
         newVal = num;
         resultVal = "";
     } else {
-        if(num === '.') {
-            if(decimalClicked != true) {
+        if (num === '.') {
+            if (decimalClicked != true) {
                 newVal += num;
                 decimalClicked = true;
             }
@@ -41,7 +41,7 @@ function equalPressBtn() {
     prevVal = parseFloat(prevVal);
     newVal = parseFloat(newVal);
 
-    switch(mathOperator){
+    switch (mathOperator) {
         case "+":
             resultVal = prevVal + newVal;
             break;
@@ -54,18 +54,31 @@ function equalPressBtn() {
         case "/":
             resultVal = prevVal / newVal;
             break;
+        case "x^2":
+            resultVal = prevVal * prevVal;
+            break;
+        case "x^3":
+            resultVal = prevVal * prevVal * prevVal;
+            break;
+        case "sqrt":
+            resultVal = Math.sqrt(prevVal);
+            break;
         default:
             resultVal = newVal;
     }
 
     let historyItem = document.createElement("li");
-    historyItem.innerHTML = `${prevVal} ${mathOperator} ${newVal} = ${resultVal}`;
-    calcHistory.appendChild(historyItem); 
+    if (mathOperator === "x^2" || mathOperator === "x^3" || mathOperator === "sqrt") {
+        historyItem.innerHTML = `${prevVal} ${mathOperator} = ${resultVal}`;
+    } else {
+        historyItem.innerHTML = `${prevVal} ${mathOperator} ${newVal} = ${resultVal}`;
+    }
+    calcHistory.appendChild(historyItem);
 
     prevVal = resultVal;
     calcInput.value = resultVal;
 
-    
+
 }
 
 function pressDelBtn() {
