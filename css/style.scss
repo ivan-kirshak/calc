@@ -73,6 +73,9 @@ body {
   color: #ffffff;
   background-color: #00a39b;
 }
+.history {
+  text-align: center;
+}
 li {
   margin: 8px;
 }
@@ -99,5 +102,8 @@ li {
   }
   .row {
     justify-content: center;
+  }
+  li{
+    text-align: center;
   }
 }

@@ -80,7 +80,6 @@ function equalPressBtn() {
     prevVal = resultVal;
     calcInput.value = resultVal;
 
-
 }
 
 function pressDelBtn() {
