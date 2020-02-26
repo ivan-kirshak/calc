@@ -1,3 +1,5 @@
+// most of calculator functionality was made by example of Derek Banas
+
 let prevVal = "";
 let newVal = "";
 let resultVal = "";
@@ -90,3 +92,15 @@ function pressDelBtn() {
     calcInput.value = 0;
 }
 
+// first trial to make pwa
+// used example shown in on freecodecamp.org 
+// (https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/#what-is-a-service-worker)
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("service worker works properly"))
+            .catch(res => console.log("something is wrong with service worker", err))
+    })
+}

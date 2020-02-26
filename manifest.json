@@ -1,0 +1,9 @@
+{
+    "name": "calc",
+    "short_name": "calc",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "index.html"
+}
